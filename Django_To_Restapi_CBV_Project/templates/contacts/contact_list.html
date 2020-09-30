@@ -1,0 +1,46 @@
+
+  {% extends 'contacts/base.html' %}
+    {% block content %}
+        {% if contacts_list %}
+            <table class="table table-dark">
+               <thead>
+                  <tr>
+                      <th>Id</th>
+                      <th>Eid</th>
+                      <th>Ename</th>
+                      <th>Email</th>
+                      <th>Econtact</th>
+                      <th>Actions</th>
+                  </tr>
+               </thead>
+
+
+
+                {% for row in contacts_list %}
+                   <tbody>
+                      <tr>
+                          <td>{{ row.id }}</td>
+                          <td>{{ row.eid }}</td>
+                          <td>{{ row.ename }}</td>
+                          <td>{{ row.eemail }}</td>
+                          <td>{{ row.econtact }}</td>
+
+                          <td>
+                              <a href="/contacts/detail/{{ row.id }}/" class="btn btn-primary">Detail</a>
+                              <a href="{% url 'contacts_update' row.id %}" class="btn btn-success">Update</a>
+                              <a href="/contacts/delete/{{ row.id }}/" class="btn btn-danger">Delete</a>
+                          </td>
+                      </tr>
+                   </tbody>
+                {% endfor %}
+            </table>
+
+            <h2 align="center">
+               <a href="{% url 'contacts_create' %}" class="btn btn-success btn-lg">Create New Record</a>
+            </h2>
+
+        {% else %}
+            <h2> Data not avaialble </h2>
+        {% endif %}
+
+   {% endblock %}

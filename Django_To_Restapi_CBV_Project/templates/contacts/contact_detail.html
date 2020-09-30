@@ -1,0 +1,14 @@
+
+{% extends 'contacts/base.html' %}
+    {% block content %}
+        {% if contact %}
+           <ol>
+             <li>Primary Key : {{ contact.id }} </li>
+             <li>Employee Eid : {{ contact.eid }} </li>
+             <li>Employee Name : {{ contact.ename }} </li>
+             <li>Employee Contact : {{ contact.econtact }} </li>
+           </ol>
+        {% else %}
+            <h2>Record not available</h2>
+        {% endif %}
+    {% endblock %}

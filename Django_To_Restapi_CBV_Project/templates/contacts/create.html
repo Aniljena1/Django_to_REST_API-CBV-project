@@ -1,0 +1,9 @@
+
+{% extends 'contacts/base.html' %}
+    {% block content %}
+        {% if created %}
+           <h2> {{ created }}</h2>
+        {% else %}
+            <h2>{{ notcreated }}</h2>
+        {% endif %}
+    {% endblock %}

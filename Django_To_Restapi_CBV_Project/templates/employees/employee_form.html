@@ -1,0 +1,13 @@
+
+
+{% extends 'employees/base.html' %}
+   {% block content %}
+      <form method="POST">
+         {% csrf_token %}
+          <table>
+              {{ form }}
+          </table>
+         <input type="submit" value="Post" style="margin-left: 100px;">
+
+      </form>
+    {% endblock %}

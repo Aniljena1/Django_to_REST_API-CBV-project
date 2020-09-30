@@ -1,0 +1,13 @@
+
+ {% extends 'employees/base.html' %}
+    {% block content %}
+
+      <h2>Display  Employee Detail</h2>
+     <h2> <ol>
+          <li>Emplyee number is : {{ object.eno }}</li>
+          <li>Emplyee  Name is :{{ object.ename }}</li>
+          <li>Emplyee  Salary is :{{ object.esal }}</li>
+          <li>Emplyee Address is :{{ object.eaddr }}</li>
+      </ol></h2>
+        <a href="{% url 'employee_list' %}" class="btn btn-primary">Goto Back</a>
+    {% endblock %}

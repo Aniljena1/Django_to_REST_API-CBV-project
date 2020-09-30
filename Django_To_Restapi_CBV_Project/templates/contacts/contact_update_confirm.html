@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+
+
+
+
+{% extends 'contacts/base.html' %}
+{% block content %}
+   {% if updated %}
+       <h2>{{ updated }}</h2>
+       <h2>Data updated successfully</h2>
+    {% else %}
+        <h2>{{ notupdated }}</h2>
+    {% endif %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+{##}
+{##}
+{##}
+{##}
+{#{% extends 'contacts/base.html' %}#}
+{#    {% block content %}#}
+{#        {% if form %}#}
+{#           <h2> {{ form }}</h2>#}
+{#           <h2> Data created successfully</h2>#}
+{#        {% else %}#}
+{#            <h2>{{ noform }}</h2>#}
+{#        {% endif %}#}
+{#    {% endblock %}#}
